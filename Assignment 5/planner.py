@@ -5,7 +5,7 @@ from collections import deque
 class MinHeap:
     def __init__(self, arr=None):
         self.heap = [] if arr is None else arr.copy()
-        for i in range((len(self.heap) // 2)-1, -1, -1):
+        for i in range(len(self.heap) // 2, -1, -1):
             self._shift_down(i)
 
     def _shift_up(self, i):
